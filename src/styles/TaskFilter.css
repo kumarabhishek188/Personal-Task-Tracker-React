@@ -1,0 +1,105 @@
+.task-filter {
+  margin-bottom: 2rem;
+}
+
+.filter-tabs {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  gap: 0.5rem;
+}
+
+.filter-tab {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #718096;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.filter-tab:hover {
+  background: #f7fafc;
+  color: #4a5568;
+}
+
+.filter-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.filter-label {
+  font-weight: 600;
+}
+
+.filter-count {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .filter-tabs {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .filter-tab {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    min-height: 44px;
+  }
+  
+  .filter-count {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-tab {
+    font-size: 0.85rem;
+    padding: 0.875rem;
+    min-height: 48px;
+  }
+  
+  .filter-label {
+    font-weight: 500;
+  }
+
+  .filter-count {
+    font-size: 0.7rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .filter-tab:hover {
+    background: transparent;
+    color: #718096;
+  }
+
+  .filter-tab:active {
+    background: #f7fafc;
+    color: #4a5568;
+  }
+
+  .filter-tab.active:active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+} 

@@ -1,0 +1,168 @@
+/* Mobile-specific optimizations */
+
+/* Prevent text selection on interactive elements */
+.btn, .task-item, .filter-tab, .search-input {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Improve touch scrolling */
+.app-main {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Optimize for mobile performance */
+.task-item, .btn, .filter-tab {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Mobile-specific animations */
+@media (max-width: 768px) {
+  .task-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn {
+    transition: all 0.15s ease;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .task-item, .btn, .filter-tab {
+      transition: none;
+    }
+  }
+}
+
+/* Mobile keyboard optimizations */
+@media (max-width: 768px) {
+  .task-form-container {
+    /* Ensure form is visible when keyboard appears */
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .search-input {
+    /* Prevent zoom on iOS when focusing */
+    font-size: 16px;
+  }
+
+  .task-form .form-group input,
+  .task-form .form-group textarea {
+    font-size: 16px;
+  }
+}
+
+/* Mobile landscape optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .app-header {
+    padding: 0.5rem 0;
+  }
+
+  .header-content {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .dashboard {
+    padding: 0.5rem 1rem;
+  }
+
+  .task-form-container {
+    max-height: 70vh;
+  }
+}
+
+/* Mobile-specific focus states */
+@media (max-width: 768px) {
+  .btn:focus,
+  .task-item:focus,
+  .filter-tab:focus,
+  .search-input:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+  }
+}
+
+/* Mobile loading states */
+@media (max-width: 768px) {
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+
+  .loading::after {
+    content: '';
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+/* Mobile error states */
+@media (max-width: 768px) {
+  .error-message {
+    background: #fed7d7;
+    color: #c53030;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .dark-mode .error-message {
+    background: #742a2a;
+    color: #feb2b2;
+  }
+}
+
+/* Mobile success states */
+@media (max-width: 768px) {
+  .success-message {
+    background: #c6f6d5;
+    color: #22543d;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .dark-mode .success-message {
+    background: #22543d;
+    color: #9ae6b4;
+  }
+}
+
+/* Mobile accessibility improvements */
+@media (max-width: 768px) {
+  /* Ensure sufficient color contrast */
+  .task-meta {
+    color: #4a5568;
+  }
+
+  .dark-mode .task-meta {
+    color: #a0aec0;
+  }
+
+  /* Improve focus indicators */
+  .btn:focus-visible,
+  .task-item:focus-visible,
+  .filter-tab:focus-visible {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+  }
+} 
