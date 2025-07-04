@@ -33,24 +33,33 @@ task-tracker/
 │   └── index.html
 ├── src/
 │   ├── components/
-│   │   ├── Login.js          # Login component
-│   │   ├── Login.css         # Login styles
-│   │   ├── TaskForm.js       # Add/Edit task form
-│   │   ├── TaskForm.css      # Task form styles
-│   │   ├── TaskItem.js       # Individual task display
-│   │   ├── TaskItem.css      # Task item styles
-│   │   ├── TaskList.js       # Task list with filtering
-│   │   ├── TaskList.css      # Task list styles
-│   │   ├── TaskFilter.js     # Filter tabs component
-│   │   └── TaskFilter.css    # Filter styles
+│   │   ├── Login.js           # Login component
+│   │   ├── TaskForm.js        # Add/Edit task form
+│   │   ├── TaskItem.js        # Individual task display
+│   │   ├── TaskList.js        # Task list with filtering
+│   │   └── TaskFilter.js      # Filter tabs component
+│
+│   ├── styles/
+│   │   ├── Login.css          # Login styles
+│   │   ├── TaskForm.css       # Task form styles
+│   │   ├── TaskItem.css       # Task item styles
+│   │   ├── TaskList.css       # Task list styles
+│   │   ├── TaskFilter.css     # Filter styles
+│   │   └── mobile.css         # Global mobile responsiveness
+│
 │   ├── utils/
-│   │   └── localStorage.js   # Local storage utilities
-│   ├── App.js               # Main application component
-│   ├── App.css              # Main application styles
-│   ├── index.js             # Application entry point
-│   └── index.css            # Global styles
+│   │   └── localStorage.js    # Local storage utilities
+│
+│   ├── App.js                 # Main application component
+│   ├── App.css                # Main application styles
+│   ├── index.js               # Application entry point
+│   └── index.css              # Global styles
+│
 ├── README.md
-└── package.json
+├── .gitignore
+├── package.json
+└── package-lock.json
+
 ```
 
 ## 🚀 Getting Started
@@ -183,5 +192,3 @@ Feel free to fork this project and submit pull requests for any improvements!
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
-
-**Built with ❤️ using React**
