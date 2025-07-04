@@ -9,6 +9,13 @@ A modern, responsive React application for personal task management with a beaut
 - **Task Management**: Add, edit, delete, and toggle completion status
 - **Task Display**: Show title, description, creation date, and completion status
 - **Task Filtering**: Filter by All, Pending, and Completed tasks with counts
+- **Search Functionality**: Search tasks by title or description
+- **Task Priority Levels**: High, medium, low priority system
+- **Due Dates**: Add deadlines to tasks
+- **Task Categories/Tags**: Organize tasks by categories
+- **Dark Mode Toggle**: Switch between light and dark themes
+- **Keyboard Shortcuts**: Quick actions with keyboard
+- **Export/Import**: Backup and restore task data
 - **Data Persistence**: All data saved to localStorage and persists after page refresh
 
 ### 🎨 UI/UX Features
@@ -154,34 +161,27 @@ npm run build
 - **TaskList.js**: Task collection with filtering logic
 - **TaskFilter.js**: Filter tabs component
 
-### Data Structure
-```javascript
-{
-  id: "unique_id",
-  title: "Task title",
-  description: "Task description",
-  completed: false,
-  createdAt: "2024-01-01T00:00:00.000Z",
-  updatedAt: "2024-01-01T00:00:00.000Z"
-}
-```
 
-## 🚀 Future Enhancements
 
-### Potential Features
-- **Search Functionality**: Search tasks by title or description
-- **Task Priority Levels**: High, medium, low priority system
-- **Due Dates**: Add deadlines to tasks
-- **Task Categories/Tags**: Organize tasks by categories
-- **Dark Mode Toggle**: Switch between light and dark themes
-- **Export/Import**: Backup and restore task data
-- **Keyboard Shortcuts**: Quick actions with keyboard
+## 🔗 Live Demo
+[Click here to view the deployed application](personal-task-tracker-react.vercel.app)
 
-### Technical Improvements
-- **PWA Support**: Make it a Progressive Web App
-- **Offline Support**: Work without internet connection
-- **Data Sync**: Cloud storage integration
-- **Performance**: Virtual scrolling for large task lists
+
+
+## 🖼 Screenshots:
+
+<img width="1440" alt="Login page" src="https://github.com/user-attachments/assets/9bb357b2-4d9a-4ccd-b521-a4c9fe9590e1" />
+
+<img width="1440" alt="Add New Task" src="https://github.com/user-attachments/assets/513c5bcc-edaf-4724-864e-50a63083bc9d" />
+
+<img width="1440" alt="Frontend UI" src="https://github.com/user-attachments/assets/56bf4c5e-0c0b-4c50-86ee-387e8a3e800d" />
+
+<img width="1440" alt="Dark Mode" src="https://github.com/user-attachments/assets/e0e434b0-9b7d-4658-be16-ab09e11f2015" />
+
+<img width="1440" alt="Edit Task" src="https://github.com/user-attachments/assets/0c2b97f4-5abd-466f-aa6f-268f81c29b42" />
+
+<img width="1440" alt="Delete Task" src="https://github.com/user-attachments/assets/3d7aa0d3-ea2f-4739-b511-f58e4efd8b50" />
+
 
 ## 🤝 Contributing
 
